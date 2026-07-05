@@ -8,6 +8,6 @@ export default async function MainTable(props:{activeTable:string}){
     const data =await fetchData<any>(tableMeta.endpoint);
     
     return (
-        <DataTable columns= {tableMeta.columns} data={data}/>        
+            <DataTable columns= {tableMeta.columns} data={data}/>                
     )
 };

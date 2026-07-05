@@ -16,8 +16,8 @@ export default async function Home({searchParams}:PageProps) {
     <div className='flex justify-content align-center flex-row gap-5'>
 
     <Sidebar/>
-    <main className='flex-5'>
-      <Suspense key = {activeTable} fallback={<SkeletonTable/>}>
+    <main className='flex-5 w-full h-full overflow-hidden'>
+      <Suspense key = {activeTable} fallback={<SkeletonTable rowCount={7} columnCount={6}/>}>
           <MainTable activeTable={activeTable}/>
       </Suspense>
     </main>

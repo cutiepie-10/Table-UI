@@ -4,7 +4,7 @@ export async function fetchData<TData>(endpoint:string):Promise<TData[]>{
     
     const data:Promise<TData[]> =  fetch(`${baseUrl}/${endpoint}`,{
         cache: 'default',
-        next:{revalidate:1800},
+        next:{revalidate:300},
     }
     ).then((res)=>{
         if(!res.ok){

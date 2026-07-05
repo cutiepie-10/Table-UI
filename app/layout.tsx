@@ -15,12 +15,13 @@ const theme = createTheme({
       h3: { fontSize: '1.5rem', lineHeight: '1.4' },
     }
   },
-  primaryColor:'moneyGreen',
+  primaryColor:'emerald',
   colors:{
-    moneyGreen:[
-      '#b3ffb3','#66ff66','#00cc00','#33cc33','#00cc66','#009933',
-      '#00b300','#008000','#004d00','#001a00'
+    emerald: [
+      '#eefcf4', '#d7f7e4', '#b2edd0', '#83ddb4', '#59c997',
+      '#34af7c', '#248f62', '#1d7250', '#185b41', '#144b37'
     ],
+
   },
   defaultRadius:'md',
   shadows:{
@@ -39,7 +40,7 @@ export default function RootLayout({
       className={`h-full antialiased`}
     >
       <body className="min-h-full">
-        <MantineProvider theme={theme}>
+        <MantineProvider theme={theme} defaultColorScheme='dark'>
           {children}
         </MantineProvider>
         
